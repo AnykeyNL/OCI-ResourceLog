@@ -31,6 +31,7 @@ def input_command_line(help=False):
     parser.add_argument('-log', default="log.txt", dest='log_file', help='output log file')
     parser.add_argument("-c", default="", dest='compartment', help="compartment id to search")
     parser.add_argument("-r", default="", dest='resource', help="resource id to search")
+    parser.add_argument("-days", default="", dest='max_days', help="max days back to search")
 
     cmd = parser.parse_args()
 
