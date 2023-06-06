@@ -28,7 +28,7 @@ print ("Search in compartment: {}".format(cmd.compartment))
 print ("Search resource: {}".format(cmd.resource))
 
 try:
-    events = oci.pagination.list_call_get_all_results(audit.list_events, compartment_id=cmd.compartment, start_time=startdate, end_time=enddate)
+    events = oci.pagination.list_call_get_all_results(audit.list_events, compartment_id=cmd.compartment, start_time=startdate, end_time=enddate).data
 except oci.exceptions.ServiceError as response:
     print("error: {}".format(response.code))
     exit()
